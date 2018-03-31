@@ -18,6 +18,8 @@ RUN /bin/bash -c "source /usr/local/bin/virtualenvwrapper.sh"
 RUN echo "source /usr/local/bin/virtualenvwrapper.sh" >> /root/.bashrc
 RUN echo "export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'" >> /root/.bashrc
 
+RUN pip install flake8 flake8-docstrings
+COPY my_configs.vim /root/.vim_runtime/
 WORKDIR /src
 
 
