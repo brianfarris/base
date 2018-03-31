@@ -14,6 +14,7 @@ RUN pip install virtualenv virtualenvwrapper
 ENV WORKON_HOME /root/.virtualenvs
 ENV PROJECT_HOME /src
 ENV VIRTUALENVWRAPPER_PYTHON /usr/bin/python3
+RUN /bin/bash -c "source /usr/local/bin/virtualenvwrapper.sh"
 RUN echo "source /usr/local/bin/virtualenvwrapper.sh" >> /root/.bashrc
 RUN echo "export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'" >> /root/.bashrc
 
